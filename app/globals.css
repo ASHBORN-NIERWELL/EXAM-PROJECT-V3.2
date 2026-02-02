@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 1. Force full height and remove ALL margins */
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow-x: hidden; /* Prevent horizontal scrollbars */
+}
+
+/* 2. Set the default background colors explicitly */
+body {
+  background-color: #f8fafc; /* Matches bg-slate-50 */
+  color: #0f172a; /* Matches text-slate-900 */
+}
+
+/* 3. Dark Mode Override */
+.dark body {
+  background-color: #020617 !important; /* Matches bg-slate-950 */
+  color: #f1f5f9 !important; /* Matches text-slate-100 */
+}
+
+/* 4. Ensure the Next.js root div also fills the height */
+/* This is often the culprit for "white bottoms" on short pages */
+body > div:first-child {
+  min-height: 100vh;
+}
