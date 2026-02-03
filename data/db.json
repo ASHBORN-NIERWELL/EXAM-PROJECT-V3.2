@@ -23,14 +23,98 @@
       "time": "15:00",
       "credits": 2,
       "familiarity": 65,
-      "units": [],
+      "units": [
+        {
+          "id": "1770038798684",
+          "name": "MDSC REVIEW",
+          "hours": 0.5,
+          "testsTaken": 0,
+          "avgScore": 0,
+          "lastStudied": "2026-02-02T13:26:38.684Z"
+        },
+        {
+          "id": "1770039436521",
+          "name": "MDSC REVIEW",
+          "hours": 0,
+          "testsTaken": 1,
+          "avgScore": 80,
+          "lastStudied": "2026-02-02T13:37:16.521Z"
+        },
+        {
+          "id": "1770039512952",
+          "name": "FSDSC REVIEW",
+          "hours": 0,
+          "testsTaken": 1,
+          "avgScore": 80,
+          "lastStudied": "2026-02-02T13:38:32.952Z"
+        }
+      ],
       "history": [
         {
           "date": "2026-02-01T06:31:05.460Z",
           "score": 65
+        },
+        {
+          "date": "2026-02-02T13:26:38.684Z",
+          "score": 65
+        },
+        {
+          "date": "2026-02-02T13:37:16.521Z",
+          "score": 69
+        },
+        {
+          "date": "2026-02-02T13:38:32.952Z",
+          "score": 73
         }
       ],
-      "notes": ""
+      "notes": "",
+      "topics": [
+        {
+          "id": "1770039591522",
+          "name": "DSC INTRODUCTION",
+          "status": "good"
+        },
+        {
+          "id": "1770039630992",
+          "name": "TYPES (MDSC/FSDSC)",
+          "status": "good"
+        },
+        {
+          "id": "1770039636885",
+          "name": "APPLICATIONS",
+          "status": "ok"
+        },
+        {
+          "id": "1770039646470",
+          "name": "CALIBRATION",
+          "status": "ok"
+        },
+        {
+          "id": "1770039655946",
+          "name": "SIM FTIR",
+          "status": "bad"
+        },
+        {
+          "id": "1770039659809",
+          "name": "SIM TGA",
+          "status": "bad"
+        },
+        {
+          "id": "1770039662533",
+          "name": "SIM TMA",
+          "status": "bad"
+        },
+        {
+          "id": "1770039670752",
+          "name": "SIM EGS",
+          "status": "bad"
+        },
+        {
+          "id": "1770039681478",
+          "name": "SIM DMA",
+          "status": "bad"
+        }
+      ]
     },
     {
       "id": "1769927490132",
@@ -39,11 +123,24 @@
       "time": "15:00",
       "credits": 2,
       "familiarity": 70,
-      "units": [],
+      "units": [
+        {
+          "id": "1770040646745",
+          "name": "🏆 Quiz Victory",
+          "hours": 2,
+          "testsTaken": 0,
+          "avgScore": 0,
+          "lastStudied": "2026-02-02T13:57:26.745Z"
+        }
+      ],
       "history": [
         {
           "date": "2026-02-01T06:31:30.132Z",
           "score": 70
+        },
+        {
+          "date": "2026-02-02T13:57:26.745Z",
+          "score": 71
         }
       ],
       "notes": ""
@@ -111,6 +208,22 @@
           "testsTaken": 1,
           "avgScore": 87,
           "lastStudied": "2026-02-01T14:06:30.039Z"
+        },
+        {
+          "id": "1770091264740",
+          "name": "Slide 5 Quiz + REVIEW",
+          "hours": 0.4,
+          "testsTaken": 0,
+          "avgScore": 0,
+          "lastStudied": "2026-02-03T04:01:04.740Z"
+        },
+        {
+          "id": "1770091280834",
+          "name": "Slide 5 Quiz",
+          "hours": 0,
+          "testsTaken": 1,
+          "avgScore": 98,
+          "lastStudied": "2026-02-03T04:01:20.834Z"
         }
       ],
       "history": [
@@ -693,6 +806,18 @@
         {
           "date": "2026-02-01T14:06:30.039Z",
           "score": 48
+        },
+        {
+          "date": "2026-02-03T03:35:36.634Z",
+          "score": 49
+        },
+        {
+          "date": "2026-02-03T04:01:04.740Z",
+          "score": 48
+        },
+        {
+          "date": "2026-02-03T04:01:20.834Z",
+          "score": 53
         }
       ],
       "notes": "",
@@ -853,9 +978,50 @@
         {
           "date": "2026-02-01T13:39:17.677Z",
           "score": 75
+        },
+        {
+          "date": "2026-02-03T03:36:35.081Z",
+          "score": 76
         }
       ],
-      "notes": ""
+      "notes": "",
+      "topics": [
+        {
+          "id": "1770127211732",
+          "name": "1. Green Chemistry and Sustainable Polymer Design",
+          "status": "bad"
+        },
+        {
+          "id": "1770127222856",
+          "name": "2. Waste Treatment Technologies",
+          "status": "bad"
+        },
+        {
+          "id": "1770127235276",
+          "name": "3. Landfilling and Disposal",
+          "status": "bad"
+        },
+        {
+          "id": "1770127245152",
+          "name": "4. Polymer Degradation Mechanisms",
+          "status": "bad"
+        },
+        {
+          "id": "1770127256811",
+          "name": "5. Strategic Waste Management and Policy",
+          "status": "bad"
+        },
+        {
+          "id": "1770127267364",
+          "name": "6. Waste Characterization and Classification",
+          "status": "bad"
+        },
+        {
+          "id": "1770127275732",
+          "name": "7. Environmental Impacts and Microplastics",
+          "status": "bad"
+        }
+      ]
     },
     {
       "id": "1769927607772",

@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { BookOpen, LayoutDashboard, Calendar, HardDrive, Moon, Sun, Loader2 } from 'lucide-react'; // Added User icon would be used but we use emoji/div for avatar
+import { BookOpen, LayoutDashboard, Calendar, HardDrive, Moon, Sun, Loader2 } from 'lucide-react';
 import { Exam, Unit } from '../types';
 import ExamInputForm from './ExamInputForm';
 import ExamCard from './ExamCard';
@@ -10,7 +10,7 @@ import NextExamWidget from './NextExamWidget';
 import TimetableView from './TimetableView';
 import ToastManager, { type Toast } from './ToastManager'; 
 import CharacterEvolution from './CharacterEvolution'; 
-import ProfileModal from './ProfileModal'; // <--- Import Component
+import ProfileModal from './ProfileModal'; 
 import { cn, calculatePreparedness } from '../utils';
 
 const INITIAL_DATA: Exam[] = [
@@ -37,18 +37,16 @@ export default function ExamTracker() {
   const [activeTab, setActiveTab] = useState<Tab>('dashboard');
   const [darkMode, setDarkMode] = useState(false);
   const [expandedExamId, setExpandedExamId] = useState<string | null>(null);
-  const [isProfileOpen, setIsProfileOpen] = useState(false); // <--- Profile State
+  const [isProfileOpen, setIsProfileOpen] = useState(false);
 
   const [toasts, setToasts] = useState<Toast[]>([]);
 
-  // ... (Toast helpers remain same) ...
   const showToast = (message: string, type: 'success' | 'error' | 'info' = 'success') => {
     const id = Date.now().toString();
     setToasts((prev) => [...prev, { id, message, type }]);
   };
   const removeToast = (id: string) => setToasts((prev) => prev.filter((t) => t.id !== id));
 
-  // ... (Effects for Theme, Loading, Saving remain same) ...
   useEffect(() => {
     if (darkMode) document.documentElement.classList.add('dark');
     else document.documentElement.classList.remove('dark');
@@ -92,6 +90,29 @@ export default function ExamTracker() {
     }, 100);
   };
 
+  // --- NEW: QUIZ HANDLER ---
+  const handleQuizVictory = (examId: string, bonusHours: number) => {
+    const victoryUnit: Unit = {
+        id: Date.now().toString(),
+        name: `🏆 Quiz Victory`,
+        hours: bonusHours,
+        testsTaken: 0,
+        avgScore: 0,
+        lastStudied: new Date().toISOString()
+    };
+
+    setExams(exams.map(e => {
+        if (e.id !== examId) return e;
+        const updatedUnits = [...e.units, victoryUnit];
+        const tempExam = { ...e, units: updatedUnits };
+        const newScore = calculatePreparedness(tempExam);
+        // Add to history
+        const newHistory = [...(e.history || []), { date: new Date().toISOString(), score: newScore }];
+        return { ...e, units: updatedUnits, history: newHistory };
+    }));
+    showToast("Analysis Verified! Bonus Points Added.", "success");
+  };
+
   // ... (Data Handlers remain same) ...
   const handleAddExam = (subject: string, date: string, time: string, credits: number, familiarity: number) => {
     const newExam: Exam = { id: Date.now().toString(), subject, date, time, credits, familiarity, units: [], history: [{ date: new Date().toISOString(), score: familiarity }], notes: '', topics: [] };
@@ -133,7 +154,6 @@ export default function ExamTracker() {
     <div className="min-h-screen transition-colors duration-300 bg-slate-50 dark:bg-slate-950">
       <ToastManager toasts={toasts} removeToast={removeToast} />
       
-      {/* --- PROFILE MODAL --- */}
       <ProfileModal 
         isOpen={isProfileOpen} 
         onClose={() => setIsProfileOpen(false)} 
@@ -154,11 +174,9 @@ export default function ExamTracker() {
           </div>
 
           <div className="flex flex-col items-end gap-3">
-             {/* Character Evolution Widget (Keep existing) */}
              <CharacterEvolution exams={exams} compact={true} />
 
              <div className="flex items-center gap-3">
-                {/* --- NEW: PROFILE AVATAR BUTTON --- */}
                 <button 
                     onClick={() => setIsProfileOpen(true)}
                     className="w-10 h-10 rounded-full bg-indigo-100 dark:bg-indigo-900/30 text-2xl flex items-center justify-center border-2 border-indigo-200 dark:border-indigo-700 hover:scale-105 transition-transform shadow-sm cursor-pointer"
@@ -195,7 +213,6 @@ export default function ExamTracker() {
           </div>
         </header>
 
-        {/* ... (Rest of dashboard code remains identical) ... */}
         {activeTab === 'dashboard' && (
           <div className="space-y-10 animate-in fade-in slide-in-from-bottom-4 duration-500">
               <NextExamWidget exams={exams} onOpenExam={handleSmartFocus} />
@@ -220,7 +237,8 @@ export default function ExamTracker() {
                       {exams.length === 0 && <div className="text-center p-12 bg-white dark:bg-slate-800 rounded-2xl border border-dashed border-slate-300 dark:border-slate-700 text-slate-400">No subjects added yet.</div>}
                   </div>
                   
-                  <AnalyticsDashboard exams={exams} />
+                  {/* UPDATED: Removed onFocusSubject, added onQuizComplete */}
+                  <AnalyticsDashboard exams={exams} onQuizComplete={handleQuizVictory} />
               </div>
           </div>
         )}
