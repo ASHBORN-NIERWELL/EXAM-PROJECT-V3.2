@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { BookOpen, LayoutDashboard, Calendar, HardDrive, Moon, Sun, Loader2 } from 'lucide-react';
-import { Exam, Unit } from '../types';
+import { Exam, Unit, Topic } from '../types'; 
 import ExamInputForm from './ExamInputForm';
 import ExamCard from './ExamCard';
 import AnalyticsDashboard from './AnalyticsDashboard';
@@ -11,6 +11,7 @@ import TimetableView from './TimetableView';
 import ToastManager, { type Toast } from './ToastManager'; 
 import CharacterEvolution from './CharacterEvolution'; 
 import ProfileModal from './ProfileModal'; 
+import BulletinBoard from './BulletinBoard'; 
 import { cn, calculatePreparedness } from '../utils';
 
 const INITIAL_DATA: Exam[] = [
@@ -90,30 +91,8 @@ export default function ExamTracker() {
     }, 100);
   };
 
-  // --- NEW: QUIZ HANDLER ---
-  const handleQuizVictory = (examId: string, bonusHours: number) => {
-    const victoryUnit: Unit = {
-        id: Date.now().toString(),
-        name: `🏆 Quiz Victory`,
-        hours: bonusHours,
-        testsTaken: 0,
-        avgScore: 0,
-        lastStudied: new Date().toISOString()
-    };
+  // --- REMOVED DEAD CODE: handleUpdateTopicStatus was deleted here ---
 
-    setExams(exams.map(e => {
-        if (e.id !== examId) return e;
-        const updatedUnits = [...e.units, victoryUnit];
-        const tempExam = { ...e, units: updatedUnits };
-        const newScore = calculatePreparedness(tempExam);
-        // Add to history
-        const newHistory = [...(e.history || []), { date: new Date().toISOString(), score: newScore }];
-        return { ...e, units: updatedUnits, history: newHistory };
-    }));
-    showToast("Analysis Verified! Bonus Points Added.", "success");
-  };
-
-  // ... (Data Handlers remain same) ...
   const handleAddExam = (subject: string, date: string, time: string, credits: number, familiarity: number) => {
     const newExam: Exam = { id: Date.now().toString(), subject, date, time, credits, familiarity, units: [], history: [{ date: new Date().toISOString(), score: familiarity }], notes: '', topics: [] };
     setExams([...exams, newExam]);
@@ -174,7 +153,10 @@ export default function ExamTracker() {
           </div>
 
           <div className="flex flex-col items-end gap-3">
-             <CharacterEvolution exams={exams} compact={true} />
+             <div className="flex items-center gap-3">
+                 <BulletinBoard exams={exams} />
+                 <CharacterEvolution exams={exams} compact={true} />
+             </div>
 
              <div className="flex items-center gap-3">
                 <button 
@@ -237,8 +219,8 @@ export default function ExamTracker() {
                       {exams.length === 0 && <div className="text-center p-12 bg-white dark:bg-slate-800 rounded-2xl border border-dashed border-slate-300 dark:border-slate-700 text-slate-400">No subjects added yet.</div>}
                   </div>
                   
-                  {/* UPDATED: Removed onFocusSubject, added onQuizComplete */}
-                  <AnalyticsDashboard exams={exams} onQuizComplete={handleQuizVictory} />
+                  {/* FIXED: Removed the invalid onUpdateTopicStatus prop */}
+                  <AnalyticsDashboard exams={exams} />
               </div>
           </div>
         )}

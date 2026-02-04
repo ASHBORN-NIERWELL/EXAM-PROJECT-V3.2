@@ -1,5 +1,3 @@
-// app/types.ts
-
 export type Unit = {
   id: string;
   name: string;
@@ -9,10 +7,13 @@ export type Unit = {
   lastStudied: string;
 };
 
+// UPDATED: Recursive Topic Type
 export type Topic = {
   id: string;
   name: string;
-  status: 'bad' | 'ok' | 'good'; // Literal type
+  status: 'bad' | 'ok' | 'good';
+  subtopics?: Topic[]; // <--- The Nested Layer
+  isOpen?: boolean;    // <--- UI State for expansion
 };
 
 export type Exam = {

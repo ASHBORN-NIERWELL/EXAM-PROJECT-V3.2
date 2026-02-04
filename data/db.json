@@ -47,6 +47,30 @@
           "testsTaken": 1,
           "avgScore": 80,
           "lastStudied": "2026-02-02T13:38:32.952Z"
+        },
+        {
+          "id": "1770188922340",
+          "name": "Focus Session (12:38 PM)",
+          "hours": 1.45,
+          "testsTaken": 0,
+          "avgScore": 0,
+          "lastStudied": "2026-02-04T07:08:42.340Z"
+        },
+        {
+          "id": "1770210515644",
+          "name": "DSC in FOOD ( CARBO,LIPIDS,PROTEINS )",
+          "hours": 0.63,
+          "testsTaken": 0,
+          "avgScore": 0,
+          "lastStudied": "2026-02-04T13:08:35.644Z"
+        },
+        {
+          "id": "1770210549684",
+          "name": "DSC in FOOD ( CARBO,LIPIDS,PROTEINS ) + TGA",
+          "hours": 0,
+          "testsTaken": 1,
+          "avgScore": 82,
+          "lastStudied": "2026-02-04T13:09:09.684Z"
         }
       ],
       "history": [
@@ -65,6 +89,18 @@
         {
           "date": "2026-02-02T13:38:32.952Z",
           "score": 73
+        },
+        {
+          "date": "2026-02-04T07:08:42.340Z",
+          "score": 74
+        },
+        {
+          "date": "2026-02-04T13:08:35.644Z",
+          "score": 74
+        },
+        {
+          "date": "2026-02-04T13:09:09.684Z",
+          "score": 78
         }
       ],
       "notes": "",
@@ -82,12 +118,13 @@
         {
           "id": "1770039636885",
           "name": "APPLICATIONS",
-          "status": "ok"
+          "status": "good"
         },
         {
           "id": "1770039646470",
           "name": "CALIBRATION",
-          "status": "ok"
+          "status": "good",
+          "isOpen": false
         },
         {
           "id": "1770039655946",
@@ -123,16 +160,7 @@
       "time": "15:00",
       "credits": 2,
       "familiarity": 70,
-      "units": [
-        {
-          "id": "1770040646745",
-          "name": "🏆 Quiz Victory",
-          "hours": 2,
-          "testsTaken": 0,
-          "avgScore": 0,
-          "lastStudied": "2026-02-02T13:57:26.745Z"
-        }
-      ],
+      "units": [],
       "history": [
         {
           "date": "2026-02-01T06:31:30.132Z",
@@ -143,7 +171,580 @@
           "score": 71
         }
       ],
-      "notes": ""
+      "notes": "",
+      "topics": [
+        {
+          "id": "md-1770211936705-1",
+          "name": "I. Introduction to Polymer Blends",
+          "status": "bad",
+          "isOpen": true,
+          "subtopics": [
+            {
+              "id": "md-sub-1770211936705-2",
+              "name": "Definition of polymer blends and alloys",
+              "status": "bad"
+            },
+            {
+              "id": "md-sub-1770211936705-3",
+              "name": "Reasons for blending",
+              "status": "bad"
+            },
+            {
+              "id": "md-sub-1770211936705-4",
+              "name": "Types of polymer blends",
+              "status": "bad"
+            },
+            {
+              "id": "md-sub-1770211936705-5",
+              "name": "Thermoplastic–thermoplastic",
+              "status": "bad"
+            },
+            {
+              "id": "md-sub-1770211936705-6",
+              "name": "Thermoplastic–thermosetting",
+              "status": "bad"
+            },
+            {
+              "id": "md-sub-1770211936705-7",
+              "name": "Thermoplastic–rubber",
+              "status": "bad"
+            },
+            {
+              "id": "md-sub-1770211936705-8",
+              "name": "Thermosetting–rubber",
+              "status": "bad"
+            },
+            {
+              "id": "md-sub-1770211936705-9",
+              "name": "Polymer–filler",
+              "status": "bad"
+            },
+            {
+              "id": "md-sub-1770211936705-10",
+              "name": "Methods of blending",
+              "status": "bad"
+            },
+            {
+              "id": "md-sub-1770211936705-11",
+              "name": "Mechanical",
+              "status": "bad"
+            },
+            {
+              "id": "md-sub-1770211936705-12",
+              "name": "Solution",
+              "status": "bad"
+            },
+            {
+              "id": "md-sub-1770211936705-13",
+              "name": "Melt",
+              "status": "bad"
+            },
+            {
+              "id": "md-sub-1770211936705-14",
+              "name": "Latex",
+              "status": "bad"
+            },
+            {
+              "id": "md-sub-1770211936705-15",
+              "name": "Monomer as solvent",
+              "status": "bad"
+            }
+          ]
+        },
+        {
+          "id": "md-1770211936705-17",
+          "name": "II. Thermodynamics of Polymer Blends",
+          "status": "bad",
+          "isOpen": false,
+          "subtopics": [
+            {
+              "id": "md-sub-1770211936705-18",
+              "name": "Basic thermodynamic principles",
+              "status": "bad"
+            },
+            {
+              "id": "md-sub-1770211936705-19",
+              "name": "Gibbs free energy",
+              "status": "bad"
+            },
+            {
+              "id": "md-sub-1770211936705-20",
+              "name": "Enthalpy",
+              "status": "bad"
+            },
+            {
+              "id": "md-sub-1770211936705-21",
+              "name": "Entropy",
+              "status": "bad"
+            },
+            {
+              "id": "md-sub-1770211936705-22",
+              "name": "Flory–Huggins theory",
+              "status": "bad"
+            },
+            {
+              "id": "md-sub-1770211936705-23",
+              "name": "Lattice model",
+              "status": "bad"
+            },
+            {
+              "id": "md-sub-1770211936705-24",
+              "name": "Entropy of mixing",
+              "status": "bad"
+            },
+            {
+              "id": "md-sub-1770211936705-25",
+              "name": "Enthalpy of mixing",
+              "status": "bad"
+            },
+            {
+              "id": "md-sub-1770211936705-26",
+              "name": "Interaction parameter (χ)",
+              "status": "bad"
+            },
+            {
+              "id": "md-sub-1770211936705-27",
+              "name": "Miscibility criteria",
+              "status": "bad"
+            },
+            {
+              "id": "md-sub-1770211936705-28",
+              "name": "Miscible systems",
+              "status": "bad"
+            },
+            {
+              "id": "md-sub-1770211936705-29",
+              "name": "Immiscible systems",
+              "status": "bad"
+            },
+            {
+              "id": "md-sub-1770211936705-30",
+              "name": "Partially miscible systems",
+              "status": "bad"
+            },
+            {
+              "id": "md-sub-1770211936705-31",
+              "name": "LCST",
+              "status": "bad"
+            },
+            {
+              "id": "md-sub-1770211936705-32",
+              "name": "UCST",
+              "status": "bad"
+            },
+            {
+              "id": "md-sub-1770211936705-33",
+              "name": "Binodal curve",
+              "status": "bad"
+            },
+            {
+              "id": "md-sub-1770211936705-34",
+              "name": "Spinodal curve",
+              "status": "bad"
+            },
+            {
+              "id": "md-sub-1770211936705-35",
+              "name": "Interaction parameters and solubility",
+              "status": "bad"
+            },
+            {
+              "id": "md-sub-1770211936705-36",
+              "name": "Cohesive energy density",
+              "status": "bad"
+            },
+            {
+              "id": "md-sub-1770211936705-37",
+              "name": "Hildebrand solubility parameter",
+              "status": "bad"
+            },
+            {
+              "id": "md-sub-1770211936705-38",
+              "name": "Hoy’s group contribution method",
+              "status": "bad"
+            }
+          ]
+        },
+        {
+          "id": "md-1770211936705-40",
+          "name": "III. Phase Behavior and Morphology",
+          "status": "bad",
+          "isOpen": false,
+          "subtopics": [
+            {
+              "id": "md-sub-1770211936705-41",
+              "name": "Phase separation mechanisms",
+              "status": "bad"
+            },
+            {
+              "id": "md-sub-1770211936705-42",
+              "name": "Nucleation and growth",
+              "status": "bad"
+            },
+            {
+              "id": "md-sub-1770211936705-43",
+              "name": "Spinodal decomposition",
+              "status": "bad"
+            },
+            {
+              "id": "md-sub-1770211936705-44",
+              "name": "Morphology types",
+              "status": "bad"
+            },
+            {
+              "id": "md-sub-1770211936705-45",
+              "name": "Dispersed/matrix",
+              "status": "bad"
+            },
+            {
+              "id": "md-sub-1770211936705-46",
+              "name": "Co-continuous structures",
+              "status": "bad"
+            },
+            {
+              "id": "md-sub-1770211936705-47",
+              "name": "Lamellar structures",
+              "status": "bad"
+            },
+            {
+              "id": "md-sub-1770211936705-48",
+              "name": "Rod-like structures",
+              "status": "bad"
+            },
+            {
+              "id": "md-sub-1770211936705-49",
+              "name": "Block copolymer self-assembly",
+              "status": "bad"
+            },
+            {
+              "id": "md-sub-1770211936705-50",
+              "name": "Factors controlling morphology",
+              "status": "bad"
+            },
+            {
+              "id": "md-sub-1770211936705-51",
+              "name": "Viscosity ratio",
+              "status": "bad"
+            },
+            {
+              "id": "md-sub-1770211936705-52",
+              "name": "Elasticity ratio",
+              "status": "bad"
+            },
+            {
+              "id": "md-sub-1770211936705-53",
+              "name": "Interfacial tension",
+              "status": "bad"
+            },
+            {
+              "id": "md-sub-1770211936705-54",
+              "name": "Processing conditions",
+              "status": "bad"
+            },
+            {
+              "id": "md-sub-1770211936705-55",
+              "name": "Composition",
+              "status": "bad"
+            }
+          ]
+        },
+        {
+          "id": "md-1770211936705-57",
+          "name": "IV. Interfaces and Compatibilization",
+          "status": "bad",
+          "isOpen": false,
+          "subtopics": [
+            {
+              "id": "md-sub-1770211936705-58",
+              "name": "Polymer blend interfaces",
+              "status": "bad"
+            },
+            {
+              "id": "md-sub-1770211936705-59",
+              "name": "Interfacial tension",
+              "status": "bad"
+            },
+            {
+              "id": "md-sub-1770211936705-60",
+              "name": "Interfacial adhesion",
+              "status": "bad"
+            },
+            {
+              "id": "md-sub-1770211936705-61",
+              "name": "Interfacial thickness",
+              "status": "bad"
+            },
+            {
+              "id": "md-sub-1770211936705-62",
+              "name": "Compatibilization techniques",
+              "status": "bad"
+            },
+            {
+              "id": "md-sub-1770211936705-63",
+              "name": "Block copolymers",
+              "status": "bad"
+            },
+            {
+              "id": "md-sub-1770211936705-64",
+              "name": "Graft copolymers",
+              "status": "bad"
+            },
+            {
+              "id": "md-sub-1770211936705-65",
+              "name": "Reactive compatibilization",
+              "status": "bad"
+            },
+            {
+              "id": "md-sub-1770211936705-66",
+              "name": "Low-molecular-weight additives",
+              "status": "bad"
+            },
+            {
+              "id": "md-sub-1770211936705-67",
+              "name": "Effects of compatibilization",
+              "status": "bad"
+            }
+          ]
+        },
+        {
+          "id": "md-1770211936705-69",
+          "name": "V. Characterization and Properties",
+          "status": "bad",
+          "isOpen": false,
+          "subtopics": [
+            {
+              "id": "md-sub-1770211936705-70",
+              "name": "Glass transition temperature",
+              "status": "bad"
+            },
+            {
+              "id": "md-sub-1770211936705-71",
+              "name": "Fox equation",
+              "status": "bad"
+            },
+            {
+              "id": "md-sub-1770211936705-72",
+              "name": "Mechanical properties",
+              "status": "bad"
+            },
+            {
+              "id": "md-sub-1770211936706-73",
+              "name": "Interpenetrating polymer networks",
+              "status": "bad"
+            },
+            {
+              "id": "md-sub-1770211936706-74",
+              "name": "IPNs",
+              "status": "bad"
+            },
+            {
+              "id": "md-sub-1770211936706-75",
+              "name": "Semi-IPNs",
+              "status": "bad"
+            },
+            {
+              "id": "md-sub-1770211936706-76",
+              "name": "Characterization techniques",
+              "status": "bad"
+            },
+            {
+              "id": "md-sub-1770211936706-77",
+              "name": "Microscopy",
+              "status": "bad"
+            },
+            {
+              "id": "md-sub-1770211936706-78",
+              "name": "XRD",
+              "status": "bad"
+            },
+            {
+              "id": "md-sub-1770211936706-79",
+              "name": "FTIR",
+              "status": "bad"
+            },
+            {
+              "id": "md-sub-1770211936706-80",
+              "name": "DSC",
+              "status": "bad"
+            }
+          ]
+        },
+        {
+          "id": "md-1770211936706-82",
+          "name": "VI. Polymer Composites",
+          "status": "bad",
+          "isOpen": false,
+          "subtopics": [
+            {
+              "id": "md-sub-1770211936706-83",
+              "name": "Definition and classification",
+              "status": "bad"
+            },
+            {
+              "id": "md-sub-1770211936706-84",
+              "name": "Matrix phase",
+              "status": "bad"
+            },
+            {
+              "id": "md-sub-1770211936706-85",
+              "name": "Dispersed phase",
+              "status": "bad"
+            },
+            {
+              "id": "md-sub-1770211936706-86",
+              "name": "Particle-reinforced composites",
+              "status": "bad"
+            },
+            {
+              "id": "md-sub-1770211936706-87",
+              "name": "Large-particle composites",
+              "status": "bad"
+            },
+            {
+              "id": "md-sub-1770211936706-88",
+              "name": "Dispersion-strengthened composites",
+              "status": "bad"
+            },
+            {
+              "id": "md-sub-1770211936706-89",
+              "name": "Fiber-reinforced composites",
+              "status": "bad"
+            },
+            {
+              "id": "md-sub-1770211936706-90",
+              "name": "Fiber types",
+              "status": "bad"
+            },
+            {
+              "id": "md-sub-1770211936706-91",
+              "name": "Continuous fibers",
+              "status": "bad"
+            },
+            {
+              "id": "md-sub-1770211936706-92",
+              "name": "Discontinuous fibers",
+              "status": "bad"
+            },
+            {
+              "id": "md-sub-1770211936706-93",
+              "name": "Fiber orientation",
+              "status": "bad"
+            },
+            {
+              "id": "md-sub-1770211936706-94",
+              "name": "Critical fiber length",
+              "status": "bad"
+            },
+            {
+              "id": "md-sub-1770211936706-95",
+              "name": "Structural composites",
+              "status": "bad"
+            },
+            {
+              "id": "md-sub-1770211936706-96",
+              "name": "Laminates",
+              "status": "bad"
+            },
+            {
+              "id": "md-sub-1770211936706-97",
+              "name": "Sandwich panels",
+              "status": "bad"
+            },
+            {
+              "id": "md-sub-1770211936706-98",
+              "name": "Mechanical behavior",
+              "status": "bad"
+            },
+            {
+              "id": "md-sub-1770211936706-99",
+              "name": "Rule of mixtures",
+              "status": "bad"
+            }
+          ]
+        },
+        {
+          "id": "md-1770211936706-101",
+          "name": "VII. Nanocomposites",
+          "status": "bad",
+          "isOpen": false,
+          "subtopics": [
+            {
+              "id": "md-sub-1770211936706-102",
+              "name": "Definition",
+              "status": "bad"
+            },
+            {
+              "id": "md-sub-1770211936706-103",
+              "name": "Classification of nanomaterials",
+              "status": "bad"
+            },
+            {
+              "id": "md-sub-1770211936706-104",
+              "name": "0D",
+              "status": "bad"
+            },
+            {
+              "id": "md-sub-1770211936706-105",
+              "name": "1D",
+              "status": "bad"
+            },
+            {
+              "id": "md-sub-1770211936706-106",
+              "name": "2D",
+              "status": "bad"
+            },
+            {
+              "id": "md-sub-1770211936706-107",
+              "name": "3D",
+              "status": "bad"
+            },
+            {
+              "id": "md-sub-1770211936706-108",
+              "name": "Unique properties",
+              "status": "bad"
+            },
+            {
+              "id": "md-sub-1770211936706-109",
+              "name": "Surface area effects",
+              "status": "bad"
+            },
+            {
+              "id": "md-sub-1770211936706-110",
+              "name": "Quantum effects",
+              "status": "bad"
+            },
+            {
+              "id": "md-sub-1770211936706-111",
+              "name": "Dispersion states",
+              "status": "bad"
+            },
+            {
+              "id": "md-sub-1770211936706-112",
+              "name": "Intercalated",
+              "status": "bad"
+            },
+            {
+              "id": "md-sub-1770211936706-113",
+              "name": "Exfoliated",
+              "status": "bad"
+            },
+            {
+              "id": "md-sub-1770211936706-114",
+              "name": "Phase separated",
+              "status": "bad"
+            },
+            {
+              "id": "md-sub-1770211936706-115",
+              "name": "Dispersion challenges",
+              "status": "bad"
+            },
+            {
+              "id": "md-sub-1770211936706-116",
+              "name": "Nanopatterning",
+              "status": "bad"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "1769927536484",
@@ -151,7 +752,7 @@
       "date": "2026-02-27",
       "time": "15:00",
       "credits": 2,
-      "familiarity": 35,
+      "familiarity": 52,
       "units": [
         {
           "id": "1769950161846",
@@ -224,6 +825,22 @@
           "testsTaken": 1,
           "avgScore": 98,
           "lastStudied": "2026-02-03T04:01:20.834Z"
+        },
+        {
+          "id": "1770177739179",
+          "name": "Slide 6 Quiz + Review",
+          "hours": 0.28,
+          "testsTaken": 0,
+          "avgScore": 0,
+          "lastStudied": "2026-02-04T04:02:19.179Z"
+        },
+        {
+          "id": "1770177762279",
+          "name": "Slide 6 Quiz",
+          "hours": 0,
+          "testsTaken": 1,
+          "avgScore": 90,
+          "lastStudied": "2026-02-04T04:02:42.279Z"
         }
       ],
       "history": [
@@ -818,6 +1435,90 @@
         {
           "date": "2026-02-03T04:01:20.834Z",
           "score": 53
+        },
+        {
+          "date": "2026-02-04T04:02:19.179Z",
+          "score": 53
+        },
+        {
+          "date": "2026-02-04T04:02:42.279Z",
+          "score": 58
+        },
+        {
+          "date": "2026-02-04T13:22:34.569Z",
+          "score": 59
+        },
+        {
+          "date": "2026-02-04T13:22:34.690Z",
+          "score": 60
+        },
+        {
+          "date": "2026-02-04T13:22:34.949Z",
+          "score": 61
+        },
+        {
+          "date": "2026-02-04T13:22:35.226Z",
+          "score": 62
+        },
+        {
+          "date": "2026-02-04T13:22:35.552Z",
+          "score": 63
+        },
+        {
+          "date": "2026-02-04T13:22:35.843Z",
+          "score": 64
+        },
+        {
+          "date": "2026-02-04T13:22:36.895Z",
+          "score": 65
+        },
+        {
+          "date": "2026-02-04T13:23:03.541Z",
+          "score": 67
+        },
+        {
+          "date": "2026-02-04T13:23:03.660Z",
+          "score": 68
+        },
+        {
+          "date": "2026-02-04T13:23:03.809Z",
+          "score": 69
+        },
+        {
+          "date": "2026-02-04T13:23:03.926Z",
+          "score": 71
+        },
+        {
+          "date": "2026-02-04T13:23:04.044Z",
+          "score": 72
+        },
+        {
+          "date": "2026-02-04T13:23:04.151Z",
+          "score": 75
+        },
+        {
+          "date": "2026-02-04T13:23:04.276Z",
+          "score": 76
+        },
+        {
+          "date": "2026-02-04T13:23:04.399Z",
+          "score": 77
+        },
+        {
+          "date": "2026-02-04T13:23:04.517Z",
+          "score": 79
+        },
+        {
+          "date": "2026-02-04T13:23:04.980Z",
+          "score": 78
+        },
+        {
+          "date": "2026-02-04T13:23:05.105Z",
+          "score": 77
+        },
+        {
+          "date": "2026-02-04T13:23:05.243Z",
+          "score": 75
         }
       ],
       "notes": "",
@@ -835,12 +1536,13 @@
         {
           "id": "1769929777079",
           "name": "3. The Operational Research Process",
-          "status": "ok"
+          "status": "good"
         },
         {
           "id": "1769929788349",
           "name": "4. Structural Artifacts (Documents & Proposals)",
-          "status": "bad"
+          "status": "ok",
+          "isOpen": true
         },
         {
           "id": "1769929794936",
@@ -861,7 +1563,16 @@
       "time": "15:00",
       "credits": 2,
       "familiarity": 75,
-      "units": [],
+      "units": [
+        {
+          "id": "1770130087308",
+          "name": "Overall Familiarity",
+          "hours": 1,
+          "testsTaken": 0,
+          "avgScore": 0,
+          "lastStudied": "2026-02-03T14:48:07.308Z"
+        }
+      ],
       "history": [
         {
           "date": "2026-02-01T06:32:50.785Z",
@@ -982,44 +1693,371 @@
         {
           "date": "2026-02-03T03:36:35.081Z",
           "score": 76
+        },
+        {
+          "date": "2026-02-03T14:48:07.308Z",
+          "score": 76
         }
       ],
       "notes": "",
       "topics": [
         {
-          "id": "1770127211732",
+          "id": "md-1770129518850-2",
           "name": "1. Green Chemistry and Sustainable Polymer Design",
-          "status": "bad"
+          "status": "bad",
+          "isOpen": true,
+          "subtopics": []
         },
         {
-          "id": "1770127222856",
-          "name": "2. Waste Treatment Technologies",
-          "status": "bad"
+          "id": "md-1770129518850-3",
+          "name": "1.1 The 12 Principles of Green Chemistry",
+          "status": "bad",
+          "isOpen": false,
+          "subtopics": [
+            {
+              "id": "md-sub-1770129518850-4",
+              "name": "**Waste Prevention:** Prioritizing the avoidance of waste over treatment.",
+              "status": "bad",
+              "subtopics": []
+            },
+            {
+              "id": "md-sub-1770129518850-5",
+              "name": "**Atom Economy:** Maximizing the incorporation of all raw materials into the final product.",
+              "status": "bad",
+              "subtopics": []
+            },
+            {
+              "id": "md-sub-1770129518850-6",
+              "name": "**Design for Degradation:** Ensuring polymers break down into innocuous substances post-use.",
+              "status": "bad",
+              "subtopics": []
+            }
+          ]
         },
         {
-          "id": "1770127235276",
-          "name": "3. Landfilling and Disposal",
-          "status": "bad"
+          "id": "md-1770129518850-8",
+          "name": "1.2 Green Solvents and Feedstocks",
+          "status": "bad",
+          "isOpen": false,
+          "subtopics": [
+            {
+              "id": "md-sub-1770129518850-9",
+              "name": "**Alternative Solvents:",
+              "status": "bad",
+              "subtopics": []
+            },
+            {
+              "id": "md-sub-1770129518850-10",
+              "name": "**Renewable Feedstocks:",
+              "status": "bad",
+              "subtopics": []
+            }
+          ]
         },
         {
-          "id": "1770127245152",
-          "name": "4. Polymer Degradation Mechanisms",
-          "status": "bad"
+          "id": "md-1770129518850-12",
+          "name": "1.3 Advanced Catalysis",
+          "status": "bad",
+          "isOpen": true,
+          "subtopics": []
         },
         {
-          "id": "1770127256811",
-          "name": "5. Strategic Waste Management and Policy",
-          "status": "bad"
+          "id": "md-1770129518850-16",
+          "name": "2. Waste Treatment and Recovery Technologies",
+          "status": "bad",
+          "isOpen": true,
+          "subtopics": []
         },
         {
-          "id": "1770127267364",
-          "name": "6. Waste Characterization and Classification",
-          "status": "bad"
+          "id": "md-1770129518850-17",
+          "name": "2.1 Thermal Treatment Processes",
+          "status": "ok",
+          "isOpen": true,
+          "subtopics": [
+            {
+              "id": "md-sub-1770129518850-18",
+              "name": "**Incineration:** Complete combustion in excess air; focuses on heat/power recovery but risks dioxin and acidic gas emissions.",
+              "status": "ok",
+              "subtopics": []
+            },
+            {
+              "id": "md-sub-1770129518850-19",
+              "name": "**Gasification:** Partial oxidation in low-oxygen environments to produce **Syngas** ($CO$ and $H_2$).",
+              "status": "ok",
+              "subtopics": []
+            },
+            {
+              "id": "md-sub-1770129518850-20",
+              "name": "**Pyrolysis:** Thermal decomposition in the total absence of oxygen; yields bio-oil, bio-char, and syngas.",
+              "status": "ok",
+              "subtopics": [],
+              "isOpen": true
+            }
+          ]
         },
         {
-          "id": "1770127275732",
-          "name": "7. Environmental Impacts and Microplastics",
-          "status": "bad"
+          "id": "md-1770129518850-27",
+          "name": "2.2 Chemical and Stabilization Treatments",
+          "status": "ok",
+          "isOpen": true,
+          "subtopics": [
+            {
+              "id": "md-sub-1770129518850-28",
+              "name": "**Solidification/Stabilization (S/S):** Using binders like cement or lime to immobilize hazardous contaminants.",
+              "status": "ok",
+              "subtopics": []
+            },
+            {
+              "id": "md-sub-1770129518850-29",
+              "name": "**Leachate Prevention:** Physical and chemical binding to prevent toxins from entering the environment.",
+              "status": "ok",
+              "subtopics": []
+            }
+          ]
+        },
+        {
+          "id": "md-1770129518850-34",
+          "name": "3.1 Classification of Landfills",
+          "status": "bad",
+          "isOpen": true,
+          "subtopics": [
+            {
+              "id": "md-sub-1770129518850-35",
+              "name": "**Open Dumps:** Unregulated disposal sites.",
+              "status": "bad",
+              "subtopics": []
+            },
+            {
+              "id": "md-sub-1770129518850-36",
+              "name": "**Sanitary Landfills:** Basic engineered sites for waste isolation.",
+              "status": "bad",
+              "subtopics": []
+            },
+            {
+              "id": "md-sub-1770129518850-37",
+              "name": "**Bioreactor Landfills:** Advanced systems that recirculate leachate to accelerate the decomposition of organic matter.",
+              "status": "bad",
+              "subtopics": []
+            }
+          ]
+        },
+        {
+          "id": "md-1770129518850-39",
+          "name": "3.2 Structural Engineering Components",
+          "status": "bad",
+          "isOpen": true,
+          "subtopics": [
+            {
+              "id": "md-sub-1770129518850-40",
+              "name": "**Bottom Liners:** Composite layers of clay and geomembranes to protect groundwater.",
+              "status": "bad",
+              "subtopics": []
+            },
+            {
+              "id": "md-sub-1770129518850-41",
+              "name": "**Leachate Collection:** Systems designed to extract and treat contaminated liquids.",
+              "status": "bad",
+              "subtopics": []
+            },
+            {
+              "id": "md-sub-1770129518850-42",
+              "name": "**Final Cover Systems:** Controls for gas migration and stormwater infiltration.",
+              "status": "bad",
+              "subtopics": []
+            }
+          ]
+        },
+        {
+          "id": "md-1770129518850-47",
+          "name": "4.1 Degradation Pathways",
+          "status": "ok",
+          "isOpen": true,
+          "subtopics": [
+            {
+              "id": "md-sub-1770129518850-48",
+              "name": "**Abiotic:** Photo-oxidative (UV), thermal, mechanical, and hydrolytic breakdown.",
+              "status": "good",
+              "subtopics": []
+            },
+            {
+              "id": "md-sub-1770129518850-49",
+              "name": "**Biotic:** Degradation facilitated by the enzymatic action of microorganisms.",
+              "status": "bad",
+              "subtopics": []
+            }
+          ]
+        },
+        {
+          "id": "md-1770129518850-51",
+          "name": "4.2 Factors Influencing Stability",
+          "status": "good",
+          "isOpen": true,
+          "subtopics": [
+            {
+              "id": "md-sub-1770129518850-52",
+              "name": "Chemical structure and functional groups.",
+              "status": "good",
+              "subtopics": [],
+              "isOpen": true
+            },
+            {
+              "id": "md-sub-1770129518850-53",
+              "name": "Degree of crystallinity.",
+              "status": "good",
+              "subtopics": []
+            },
+            {
+              "id": "md-sub-1770129518850-54",
+              "name": "Concentration of additives or impurities.",
+              "status": "good",
+              "subtopics": []
+            }
+          ]
+        },
+        {
+          "id": "md-1770129518850-59",
+          "name": "5.1 The Circular Economy Model",
+          "status": "good",
+          "isOpen": true,
+          "subtopics": [
+            {
+              "id": "md-sub-1770129518850-60",
+              "name": "Transitioning from linear \"make-use-discard\" to systems prioritizing reuse and closed-loop recycling.",
+              "status": "good",
+              "subtopics": [],
+              "isOpen": true
+            }
+          ]
+        },
+        {
+          "id": "md-1770129518850-62",
+          "name": "5.2 Regulatory Frameworks",
+          "status": "bad",
+          "isOpen": false,
+          "subtopics": [
+            {
+              "id": "md-sub-1770129518850-63",
+              "name": "**US EPA:** Draft National Strategy to Prevent Plastic Pollution.",
+              "status": "bad",
+              "subtopics": []
+            },
+            {
+              "id": "md-sub-1770129518850-64",
+              "name": "**Sri Lanka:** National Action Plan for single-use plastic phase-out and improved collection.",
+              "status": "bad",
+              "subtopics": []
+            }
+          ]
+        },
+        {
+          "id": "md-1770129518850-66",
+          "name": "5.3 The Expanded Waste Hierarchy",
+          "status": "bad",
+          "isOpen": true,
+          "subtopics": [
+            {
+              "id": "md-sub-1770129518850-67",
+              "name": "**The 5Rs:** Refuse, Reduce, Reuse, Recycle, and Recover.",
+              "status": "ok",
+              "subtopics": []
+            }
+          ]
+        },
+        {
+          "id": "md-1770129518850-72",
+          "name": "6.1 Categorization by Origin",
+          "status": "ok",
+          "isOpen": true,
+          "subtopics": [
+            {
+              "id": "md-sub-1770129518850-73",
+              "name": "Municipal, Industrial, Medical, and Hazardous.",
+              "status": "bad",
+              "subtopics": []
+            }
+          ]
+        },
+        {
+          "id": "md-1770129518850-75",
+          "name": "6.2 Hazardous Waste Criteria (RCRA Standards)",
+          "status": "bad",
+          "isOpen": true,
+          "subtopics": []
+        },
+        {
+          "id": "md-1770129518850-84",
+          "name": "7.1 Microplastics (<5mm)",
+          "status": "good",
+          "isOpen": false,
+          "subtopics": [
+            {
+              "id": "md-sub-1770129518850-85",
+              "name": "**Primary vs. Secondary:** Pre-manufactured beads vs. fragments from larger debris.",
+              "status": "good",
+              "subtopics": []
+            },
+            {
+              "id": "md-sub-1770129518850-86",
+              "name": "**Pathways:** Terrestrial runoff and direct marine deposition.",
+              "status": "good",
+              "subtopics": [],
+              "isOpen": true
+            }
+          ]
+        },
+        {
+          "id": "md-1770129518850-88",
+          "name": "7.2 Chemical Toxicity",
+          "status": "bad",
+          "isOpen": true,
+          "subtopics": [
+            {
+              "id": "md-sub-1770129518850-89",
+              "name": "**Sorption:** Plastics attracting hydrophobic toxins like DDT and PCBs.",
+              "status": "bad",
+              "subtopics": [],
+              "isOpen": true
+            },
+            {
+              "id": "md-sub-1770129518850-90",
+              "name": "**Leaching:** Release of internal additives such as phthalates.",
+              "status": "bad",
+              "subtopics": []
+            }
+          ]
+        },
+        {
+          "id": "md-1770129518850-92",
+          "name": "7.3 Climate Impact",
+          "status": "bad",
+          "isOpen": true,
+          "subtopics": []
+        },
+        {
+          "id": "md-1770129518850-97",
+          "name": "8. Non-Plastic Polymer Waste Streams",
+          "status": "bad",
+          "isOpen": true,
+          "subtopics": [
+            {
+              "id": "md-sub-1770129518850-98",
+              "name": "**Rubber Waste:**",
+              "status": "bad",
+              "subtopics": []
+            },
+            {
+              "id": "md-sub-1770129518850-99",
+              "name": "**Textile Waste:**",
+              "status": "bad",
+              "subtopics": []
+            },
+            {
+              "id": "md-sub-1770129518850-100",
+              "name": "**Other Streams:**",
+              "status": "bad",
+              "subtopics": []
+            }
+          ]
         }
       ]
     },
