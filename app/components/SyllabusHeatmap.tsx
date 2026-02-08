@@ -8,12 +8,13 @@ import { cn } from '../utils';
 type Props = {
   topics: Topic[];
   onUpdateTopics: (newTopics: Topic[]) => void;
+  // NEW: Callback for Gamification
+  onStatusChange?: (topicId: string, newStatus: 'bad' | 'ok' | 'good') => void;
 };
 
-export default function SyllabusHeatmap({ topics = [], onUpdateTopics }: Props) {
+export default function SyllabusHeatmap({ topics = [], onUpdateTopics, onStatusChange }: Props) {
   const [newTopic, setNewTopic] = useState('');
 
-  // 1. Recursive Helper: UPDATE
   const updateTopicDeep = (list: Topic[], id: string, transform: (t: Topic) => Topic): Topic[] => {
     return list.map(t => {
       if (t.id === id) return transform(t);
@@ -22,21 +23,29 @@ export default function SyllabusHeatmap({ topics = [], onUpdateTopics }: Props) 
     });
   };
 
-  // 2. NEW Recursive Helper: DELETE
   const removeTopicDeep = (list: Topic[], id: string): Topic[] => {
     return list
-      .filter(t => t.id !== id) // Remove if ID matches
+      .filter(t => t.id !== id)
       .map(t => ({
         ...t,
-        subtopics: t.subtopics ? removeTopicDeep(t.subtopics, id) : [] // Recurse into children
+        subtopics: t.subtopics ? removeTopicDeep(t.subtopics, id) : []
       }));
   };
 
-  const cycleStatus = (id: string, e: React.MouseEvent) => {
+  const cycleStatus = (id: string, currentStatus: string, e: React.MouseEvent) => {
     e.stopPropagation();
-    const cycle = (status: string) => status === 'bad' ? 'ok' : status === 'ok' ? 'good' : 'bad';
-    const updated = updateTopicDeep(topics, id, (t) => ({ ...t, status: cycle(t.status) as any }));
+    
+    // Determine next status
+    const nextStatus = currentStatus === 'bad' ? 'ok' : currentStatus === 'ok' ? 'good' : 'bad';
+    
+    // 1. Update Data Model
+    const updated = updateTopicDeep(topics, id, (t) => ({ ...t, status: nextStatus as any }));
     onUpdateTopics(updated);
+
+    // 2. Trigger Gamification Event (if provided)
+    if (onStatusChange) {
+        onStatusChange(id, nextStatus as any);
+    }
   };
 
   const toggleExpand = (id: string) => {
@@ -45,7 +54,7 @@ export default function SyllabusHeatmap({ topics = [], onUpdateTopics }: Props) 
   };
 
   const handleRemove = (id: string, e: React.MouseEvent) => {
-    e.stopPropagation(); // Stop click from triggering expand
+    e.stopPropagation();
     const updated = removeTopicDeep(topics, id);
     onUpdateTopics(updated);
   };
@@ -74,21 +83,18 @@ export default function SyllabusHeatmap({ topics = [], onUpdateTopics }: Props) 
             onClick={() => toggleExpand(node.id)}
             title="Click to expand/collapse"
         >
-            {/* Expander Arrow */}
             {node.subtopics && node.subtopics.length > 0 ? (
                 node.isOpen ? <ChevronDown size={14} /> : <ChevronRight size={14} />
             ) : <div className="w-3.5" />} 
 
             <span className="flex-1 text-sm font-bold truncate">{node.name}</span>
             
-            {/* Status Cycle Circle */}
             <div 
                 className="w-3 h-3 rounded-full border border-current opacity-60 hover:opacity-100 hover:scale-125 transition-all mr-2"
-                onClick={(e) => cycleStatus(node.id, e)}
+                onClick={(e) => cycleStatus(node.id, node.status, e)} // Pass current status
                 title="Cycle Status (Red -> Yellow -> Green)"
             ></div>
 
-            {/* NEW: Remove Button (Hidden until hover) */}
             <button 
                 onClick={(e) => handleRemove(node.id, e)}
                 className="opacity-0 group-hover:opacity-100 p-1 hover:bg-black/10 dark:hover:bg-white/20 rounded transition-all text-current"

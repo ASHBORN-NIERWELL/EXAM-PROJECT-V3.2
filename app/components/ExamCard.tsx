@@ -1,12 +1,13 @@
 'use client';
 
 import React, { useState } from 'react';
+// ADDED Flame import
 import { ChevronDown, ChevronUp, Clock, Sparkles, SlidersHorizontal, Timer, LayoutList, Flame, CheckCircle2 } from 'lucide-react';
 import { differenceInDays, parseISO } from 'date-fns';
 import { Exam, Unit, Topic } from '../types'; 
 import { calculatePreparedness, calculatePomodoro, cn } from '../utils'; 
 import UnitWidget from './UnitWidget';
-import SyllabusMapper from './SyllabusMapper'; // <--- UPDATED IMPORT
+import SyllabusMapper from './SyllabusMapper'; 
 import ProgressWidget from './ProgressWidget'; 
 import PomodoroTimer from './PomodoroTimer';
 import SyllabusHeatmap from './SyllabusHeatmap';
@@ -17,14 +18,18 @@ type Props = {
   onToggle: () => void; 
   onDeleteExam: (id: string) => void;
   onAddUnit: (examId: string, name: string, hours: number, tests: number, score: number) => void;
-  onImportUnits: (examId: string, units: Unit[]) => void; // Keep for legacy if needed, or remove
+  onImportUnits: (examId: string, units: Unit[]) => void;
   onDeleteUnit: (examId: string, unitId: string) => void;
   onUpdateFamiliarity: (examId: string, score: number) => void;
   onUpdateExam: (updatedExam: Exam) => void; 
+  onTopicStatusChange?: (examId: string, topicId: string, newStatus: 'bad' | 'ok' | 'good') => void;
 };
 
-export default function ExamCard({ exam, isExpanded, onToggle, onDeleteExam, onAddUnit, onDeleteUnit, onImportUnits, onUpdateFamiliarity, onUpdateExam }: Props) {
-  const [showMapper, setShowMapper] = useState(false); // Renamed state
+export default function ExamCard({ 
+    exam, isExpanded, onToggle, onDeleteExam, onAddUnit, onDeleteUnit, onImportUnits, onUpdateFamiliarity, onUpdateExam, 
+    onTopicStatusChange 
+}: Props) {
+  const [showMapper, setShowMapper] = useState(false);
   const [showTimer, setShowTimer] = useState(false);
   const [showSyllabus, setShowSyllabus] = useState(false); 
 
@@ -46,12 +51,9 @@ export default function ExamCard({ exam, isExpanded, onToggle, onDeleteExam, onA
     onUpdateExam({ ...exam, topics: newTopics });
   };
 
-  // Handler for the new Mapper
   const handleMapImport = (importedTopics: Topic[]) => {
-    // We append to existing or replace? Let's replace for a clean map, or append.
-    // Here we replace to allow full regeneration.
     onUpdateExam({ ...exam, topics: importedTopics });
-    setShowSyllabus(true); // Auto-open the syllabus view to show results
+    setShowSyllabus(true); 
   };
 
   const handleSaveSession = (unitName: string, minutes: number, details: string) => {
@@ -69,6 +71,8 @@ export default function ExamCard({ exam, isExpanded, onToggle, onDeleteExam, onA
         <button 
           onClick={onToggle} 
           className="w-full text-left p-6 cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-700/50 transition-colors focus:outline-none"
+          title={isExpanded ? "Collapse Card" : "Expand Card"}
+          aria-label={isExpanded ? "Collapse Card" : "Expand Card"}
         >
           <div className="flex justify-between items-start mb-4">
             <div>
@@ -136,7 +140,7 @@ export default function ExamCard({ exam, isExpanded, onToggle, onDeleteExam, onA
                 </button>
 
                 <button 
-                  onClick={() => setShowMapper(true)} // Opens NEW Mapper
+                  onClick={() => setShowMapper(true)} 
                   className="flex items-center gap-1.5 px-4 py-2 bg-indigo-50 dark:bg-indigo-500/10 text-indigo-700 dark:text-indigo-400 text-xs font-bold uppercase tracking-wide rounded-lg hover:bg-indigo-100 dark:hover:bg-indigo-500/20 transition-all active:scale-95"
                   title="Auto-Map Syllabus Structure" 
                 >
@@ -152,12 +156,12 @@ export default function ExamCard({ exam, isExpanded, onToggle, onDeleteExam, onA
                       <SyllabusHeatmap 
                           topics={exam.topics || []}
                           onUpdateTopics={handleUpdateTopics}
+                          onStatusChange={(topicId, status) => onTopicStatusChange && onTopicStatusChange(exam.id, topicId, status)}
                       />
                     </div>
                 )}
 
                 <div className="bg-white dark:bg-slate-800 p-4 rounded-xl border border-slate-100 dark:border-slate-700 mt-6 shadow-sm">
-                    {/* Familiarity Slider Code (Same as before) */}
                     <div className="flex items-center gap-3 mb-3">
                         <SlidersHorizontal size={16} className="text-slate-400" />
                         <label htmlFor={`fam-${exam.id}`} className="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase flex-1">Baseline Familiarity</label>
@@ -167,6 +171,8 @@ export default function ExamCard({ exam, isExpanded, onToggle, onDeleteExam, onA
                         id={`fam-${exam.id}`} type="range" min="0" max="100" value={exam.familiarity} 
                         onChange={(e) => onUpdateFamiliarity(exam.id, parseInt(e.target.value))}
                         className="w-full h-2 bg-slate-100 dark:bg-slate-700 rounded-lg appearance-none cursor-pointer accent-indigo-500 hover:accent-indigo-400 transition-all"
+                        aria-label="Adjust familiarity score"
+                        title="Adjust familiarity score"
                     />
                 </div>
              </div>
@@ -183,7 +189,6 @@ export default function ExamCard({ exam, isExpanded, onToggle, onDeleteExam, onA
         )}
       </div>
 
-      {/* REPLACED: UnitImporter -> SyllabusMapper */}
       <SyllabusMapper 
         subject={exam.subject}
         isOpen={showMapper}

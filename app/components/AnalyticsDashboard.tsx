@@ -1,20 +1,18 @@
 'use client';
 
 import React from 'react';
-import { PieChart, Target, ArrowUpRight, AlertTriangle } from 'lucide-react';
+import { PieChart, AlertTriangle } from 'lucide-react';
 import { Exam } from '../types';
-import { calculatePreparedness, calculatePomodoro, calculateUrgency, cn } from '../utils'; 
+import { calculatePreparedness, calculateUrgency, cn } from '../utils'; 
 import StudyHeatmap from './StudyHeatmap';
 import MemoryDrainWidget from './MemoryDrainWidget';
 
-
-// 1. FIXED: Updated Props to accept the status updater
+// FIXED: Removed the unused 'onUpdateTopicStatus' prop
 type Props = {
   exams: Exam[];
-  onUpdateTopicStatus: (examId: string, topicId: string, newStatus: 'bad' | 'ok' | 'good') => void;
 };
 
-export default function AnalyticsDashboard({ exams, onUpdateTopicStatus }: Props) {
+export default function AnalyticsDashboard({ exams }: Props) {
   
   const totalWeight = exams.reduce((acc, exam) => acc + calculateUrgency(exam), 0);
 
@@ -35,9 +33,7 @@ export default function AnalyticsDashboard({ exams, onUpdateTopicStatus }: Props
       {/* 1. Memory Drain */}
       <MemoryDrainWidget exams={exams} />
 
-     
-
-      {/* 3. Load Balancer */}
+      {/* 2. Load Balancer */}
       <div className="bg-white dark:bg-slate-800 p-6 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm transition-colors">
         <div className="flex justify-between items-end mb-6">
             <div>
